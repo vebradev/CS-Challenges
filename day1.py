@@ -41,3 +41,43 @@ discounted_price = book_price - (book_price * 25 / 100)
 wholesale_cost = (discounted_price + 2.50) + (74 * (discounted_price + 1))
 
 print(f"Total wholesale cost for 75 copies: ${wholesale_cost:.2f}")
+
+################
+## Exercise 2 ##
+################
+
+# 2. Change do_twice so it takes two arguments, a function object and a value, 
+# and calls the function twice, passing the value as an argument.
+
+def do_twice(function, string):
+    function(string)
+    function(string)
+    
+def print_spam(string):
+    print(string)
+    
+do_twice(print_spam, "do_twice prints twice")
+
+# 3. Define a function called print_twice that takes one argument and prints 
+# the value of that argument twice.
+
+def print_twice(arg):
+    print(arg)
+    print(arg)
+    
+print_twice("print_twice prints twice")
+
+# 4. Use the changed version of do_twice to call print_twice twice, 
+# passing 'spam' as an argument.
+
+do_twice(print_twice, "spam")
+
+# 5. Define a new function called do_four that takes a function object and a value 
+# and calls the function four times, passing the value as a parameter. 
+# There should be only two statements in the body of this function, not four.
+
+def do_four(function, value):
+    for _ in range(4):
+        function(value)
+
+do_four(print_spam, "do_four prints spam 4 times")
