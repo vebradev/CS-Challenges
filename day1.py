@@ -81,3 +81,39 @@ def do_four(function, value):
         function(value)
 
 do_four(print_spam, "do_four prints spam 4 times")
+
+################
+## Exercise 3 ##
+################
+
+# Fermat’s Last Theorem says that there are no positive integers 
+# a, b, and c such that a**n + b**n == c**n
+
+# 1. Write a function named check_fermat that takes four parameters—a, b, c and 
+# n —and checks to see if Fermat’s theorem holds. If n is greater than 2 and 
+# a**n + b**n = c**n the program should print, "Holy smokes, Fermat was wrong!" 
+# Otherwise the program should print, "No, that doesn't work."
+
+def check_fermat(a, b, c, n):
+    print("Holy smokes, Fermat was wrong!") if n > 2 and a**n + b**n == c**n else print("No, that doesn't work.")
+    
+# 2. Write a function that prompts the user to input values for a, b, c and n, 
+# converts them to integers, and uses check_fermat to check whether they violate 
+# Fermat’s theorem.
+
+def fermat_inputs():
+    inputs = []
+    variables = ('a', 'b', 'c', 'n')
+    
+    while len(inputs) < 4:
+        for i in variables:
+            var = input(f"Enter integer value for '{i}': ")
+            while not var.lstrip('-').isdigit():
+                var = input(f"Try again to enter integer value for '{i}': ")
+            inputs.append(int(var))
+                
+    if len(inputs) == 4:
+        a, b, c, n = inputs
+        check_fermat(a, b, c, n)    
+
+# fermat_inputs()
