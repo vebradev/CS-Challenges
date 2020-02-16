@@ -117,3 +117,180 @@ def fermat_inputs():
         check_fermat(a, b, c, n)    
 
 # fermat_inputs()
+
+#########################
+## Objective challenge ##
+#########################
+
+# List is a data structure that stores an ordered collection of any number of items that can hold different 
+# data types. List allows to have duplicates, it's elements can be selected using indices and list is a mutable
+# data type - it can be altered by adding or removing items.
+
+# Tuple is similar data structure to a list in a sense that it holds a sequence of values. The main difference
+# is that tuples don't offer same functionality as lists do - values of tuples are immutable. Having this in mind,
+# tuples are perfect to hold certain data that is not goint to be altered by the program. Also, they are faster
+# than lists.
+
+# Dictionary stores data in a key-value pairs, therefore key has to have unique value. Key-value pairs in dictionary
+# do not follow any specific order, so one has to use it's key to access a certain value in dictionary. Dictionaries
+# are mutable.
+
+# Set is an unordered collection of simple objects in Python. In addition to being iterable and mutable, 
+# a set has no duplicate elements. 
+
+###########
+## Lists ##
+###########
+
+# 1. Create a list
+hey_im_a_list = ['a', 'b', 'c', 'd']
+
+# 2. Access list items
+hey_im_a_list[0]
+
+# 3. Change the value of a list item
+hey_im_a_list[0] = 'x'
+
+# 4. Loop through a list
+for i in hey_im_a_list:
+    pass
+
+# 5. Check if a list item exists
+'x' in hey_im_a_list
+
+# 6. Get the length of a list
+len(hey_im_a_list)
+
+# 7. Add an item to the end of a list
+hey_im_a_list.append('z')
+
+# 8. Add an item at a specified index
+hey_im_a_list.insert(3, 'B')
+
+# 9. Remove an item
+hey_im_a_list.remove('c')
+
+# 10. Remove an item at a specified index
+hey_im_a_list.pop(0)
+
+# 11. Empty a list
+hey_im_a_list.clear()
+
+# 12. Use the list() constructor to make a list
+hey_im_a_new_list = list('qwerty')
+
+##################
+## Dictionaries ##
+##################
+
+# 1. Create a dictionary
+club = {'name': 'Arsenal', 'manager': 'Mikel Arteta'}
+
+# 2. Access the items of a dictionary
+club['name']
+
+# 3. Change the value of a specific item in a dictionary
+club['name'] = 'Woolwich Arsenal'
+
+# 4. Print all key names in a dictionary, one by one
+for keys in club.keys():
+    print(keys)
+    
+# 5. Print all values in a dictionary, one by one
+for values in club.values():
+    print(values)
+    
+# 6. Use the values() function to return values of a dictionary
+club.values()
+
+# 7. Loop through both keys and values, by using the items() function
+for k, v in club.items():
+    pass
+
+# 8. Check if a key exists
+'name' in club.keys()
+
+# 9. Get the length of a dictionary
+len(club)
+
+# 10. Add an item to a dictionary
+club.update({'colors': ['red', 'white']})
+
+# 11. Remove an item from a dictionary
+club.pop('name')
+
+# 12. Empty a dictionary
+club.clear()
+
+# 13. Use the dict() constructor to create a dictionary
+new_club = dict()
+
+############
+## Tuples ##
+############
+
+# 1. Create a tuple
+days = 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+
+# 2. Access tuple items
+days[0]
+
+# 3. Change tuple values
+print('No, thank you. Tuple values are immutable.')
+
+# 4. Loop through a tuple
+for i in days:
+    pass
+
+# 5. Check if a tuple item exists
+'Monday' in days
+
+# 6. Get the length of a tuple
+len(days)
+
+# 7. Delete a tuple
+del days
+
+# 8. Use the tuple() constructor to create a tuple
+days = tuple()
+
+##########
+## Sets ##
+##########
+
+# 1. Create a set
+months = {'January', 'February', 'March', 'April'}
+
+# 2. Loop through a set
+for i in months:
+    pass
+
+# 3. Check if an item exists
+'January' in months
+
+# 4. Add an item to a set
+months.add('May')
+
+# 5. Add multiple items to a set
+months.update({'June', 'July'})
+
+# 6. Get the length of a set
+len(months)
+
+# 7. Remove an item in a set
+months.remove('May')
+
+# 8. Remove an item in a set by using the discard() method
+months.discard('June')
+
+# 9. Remove the last item in a set by using the pop() method
+print('No, thanks again. Sets are unordered, therefore pop() is going to remove the random item from it.')
+
+# 10. Empty a set
+months.clear()
+
+# 11. Delete a set
+del months
+
+# 12. Use the set() constructor to create a set
+months = set()
