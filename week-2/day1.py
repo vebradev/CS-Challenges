@@ -14,7 +14,7 @@ def binary_search(n, l=numbers):
     end = len(l) - 1
 
     while start <= end:
-        middle = (start + end) / 2
+        middle = int((start + end) / 2)
         if n < l[middle]:
             end = middle - 1
         elif n > l[middle]:
